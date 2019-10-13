@@ -23,8 +23,9 @@ app.use(userRouter);
 
 app.use(express.static(__dirname, "angular"));
 
-app.use((req,ress,next)=>{
-    res.sendFile(path.join(__dirname, "Recipe", "index.html"));
+app.use("/", (req,ress,next)=>{
+    // res.sendFile(path.join(__dirname, "Recipe", "index.html"));
+    res.json({"message":"working"})
 })
 
 app.listen(port, ()=>{
