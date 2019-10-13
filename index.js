@@ -24,8 +24,8 @@ console.log(__dirname)
 app.use(express.static(path.join(__dirname, "Recipe")));
 
 app.use("/", (req,ress,next)=>{
-    // res.sendFile(path.join(__dirname, "Recipe", "index.html"));
-    res.json({"message":"working"})
+    res.sendFile(path.join(__dirname, "Recipe", "index.html"));
+    // res.json({"message":"working"})
 })
 
 app.listen(port, ()=>{
