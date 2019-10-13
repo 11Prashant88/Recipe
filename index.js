@@ -20,8 +20,8 @@ app.use(recipeRouter);
 app.use(ingredientRouter);
 app.use(userRouter);
 
-
-app.use(express.static(__dirname, "angular"));
+console.log(__dirname)
+app.use(express.static(path.join(__dirname, "Recipe")));
 
 app.use("/", (req,ress,next)=>{
     // res.sendFile(path.join(__dirname, "Recipe", "index.html"));

@@ -9,6 +9,6 @@ mongoose.connect("mongodb+srv://Prashant:SW2isUR9NmjMiyBz@recipecluster-pccbm.mo
 .then(()=>{
     console.log('mongodb connected');
 })
-.catch(()=>{
-    console.log('error while connecting to mongodb');
+.catch((e)=>{
+    console.log('error while connecting to mongodb'+e);
 })
